@@ -1,0 +1,124 @@
+/* font-display: swap;     Mostra a fonte alternativa antes de carregar a fonte
+elementos do tipo BLOCK, ocupam toda a linha e possuem margem acima e abaixo*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Unbounded";
+    src: url("../fonts/Unbounded/static/Unbounded-Bold.ttf")
+    format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins/Poppins-Regular.ttf")
+    format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins/Poppins-Bold.ttf")
+    format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+    background-color: #0E1014;
+    color: #fff;
+}
+
+h1{
+    font-size: 64px;
+    font-family: "Unbounded", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    max-width: 630px;
+}
+h1 span{
+    color: #9747ff;
+}
+
+p{
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    max-width: 792px;
+    line-height: 36px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    background-color: #9747ff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    display: inline-block;   /*links são elementos inline, inline-block permite que manipule altura e largura*/
+    line-height: 24px;
+    font-size: 24px;
+    padding: 24px 32px;
+    border-radius: 36px;
+    text-align: center;
+    margin: 0 auto;
+}
+a:hover{
+    background-color: #8233E8;
+}
+
+
+.flex-column{display: flex; flex-direction: column; align-items: center;}
+.flex-section{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+}
+.flex-content{
+    max-width: 1200px;
+    width: 100%;
+}
+
+header{
+    padding: 75px 24px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img, .hero img{
+    display: block;
+}
+section{
+    padding: 60px 24px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+.container div{
+    gap: 24px;
+}
+.container img{
+    max-width: 792px;
+    width: 100%;
+}
+
+@media (max-width:450px) {
+    h1 {font-size: 40px;}
+    p {font-size: 16px; line-height: 24px;}
+    a {font-size: 16px; padding: 16px 24px;}
+    section {padding: 32px 24px;}
+    header{padding: 40px 24px;}
+}
